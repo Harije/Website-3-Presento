@@ -1,4 +1,6 @@
-
+*{
+    font-family: sans-serif;
+}
 .navbar-light .navbar-brand span{
     color: #e03a3c;
 }
@@ -6,7 +8,7 @@
     color:black !important;
     font-weight: 500;
 }
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover{
     color: #e03a3c !important;
 }
 .btn {
@@ -25,6 +27,7 @@
     background:linear-gradient(rgb(1 1 2 / 57%), rgb(1 1 2 / 57%)), url(./img/content/hero-bg.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
 }
@@ -46,7 +49,6 @@
 /*=========================================================================================================  */
 #clients{
     position: relative;
-    /* background-color: #f3f5fa; */
 }
 #clients img {
     max-width: 45%;
@@ -57,6 +59,7 @@
     filter: none;
     transform: scale(1.3);
 }
+
 /* ======================================================================================================================== */
 #About{
     position: relative;
@@ -105,19 +108,19 @@
     transform: translateY(-10px);
 }
 /* ==================================================================================================================== */
-#services .container .card-body {
+#counts .container .card-body {
     transition: 0.5s; 
     position: relative;
 }
-#services .container .card-body .card-title {
+#counts .container .card-body .card-title {
     color:  #37517e; 
 }
-#services .container .card-body:hover{
+#counts .container .card-body:hover{
     position: relative;
     top: -1px;
     transform: translateY(-10px);
 }
-#services .container .card-body i{
+#counts .container .card-body i{
     color: #e03a3c;
 }
 /* ========================================================================================================== */
@@ -134,60 +137,128 @@
     color: #fff !important;
     border-color: #e03a3c !important;
 }
+#tabs .tab-content i{
+    color:#e03a3c !important;
+}
 /* ============================================================================================================== */
-#cta{
-    background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(./img/cta/cta-bg.jpg) fixed center center;
-    background-size: cover;
-    padding: 120px 0;
+#services{
+    position: relative;
 }
-#cta h3 {
-    color: #fff;
+#services::before{
+    z-index: 0;
+    content: "";
+    background: #1b1b1b;
+    position: absolute;
+    bottom: 40px;
+    top: 40px;
+    left: 0;
+    right: 0;
+    transform: skewY(-3deg);
 }
-#cta p {
-    color: #fff;
+#services h2 {
+    position: relative;
+    color: white;
 }
-#cta .cta-btn {
-    font-family: "Jost", sans-serif;
-    letter-spacing: 1px;
-    display: inline-block;
-    transition: 0.5s;
+#services h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: black;
+    bottom: 1px;
+    left: calc(50% - 60px);
 }
-#cta .cta-btn:hover {
-    background: #47b2e4;
-    border: 3px solid #47b2e4 !important;
+#services h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background:#e03a3c ;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+#services .container{
+   position: relative;
+}
+#services .row div a button{
+    background-color:#1b1b1b;
+    color: white;
+}
+#services .row {
+    color: white;
+}
+#services .container .card-body {
+    background: #252525;
+    transition: 1s;
+}
+#services .container .card-body .card-title {
+    color:  #fcfdfe; 
+    transition: 1s;
+}
+#services .container .card-body .card-title:hover {
+    text-decoration: underline; 
+}
+#services .container .card-body p {
+    color:  gray; 
+}
+#services .container .card-body .boicon {
+    color: #e03a3c;
+}
+#services .container .card-body:hover{
+    background: #2b2b2b;
 }
 /* =========================================================================================================== */
-#portfolio .container .row .col-12 {
-    width: 100%;
+#portfolio h2 {
+    position: relative;
+    color: black;
 }
-.btn-link {
-    color: black !important;
-    line-height: 1px;
-    text-decoration: none !important;
-    border: none !important;
+#portfolio h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: white;
+    bottom: 1px;
+    left: calc(50% - 60px);
 }
-.btn-primary:hover{
-    background: #47b2e4;
+#portfolio h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background:#e03a3c ;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+#portfolio .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff !important;
+    background-color:#e03a3c !important ;
 }
-#portfolio .active{
-   background-color:#47b2e4 !important;
-   color: white  !important;
- }
+#portfolio .nav-link{
+    color:#e03a3c !important ;
+}
+#portfolio .nav-link:hover{
+    color: #fff !important;
+    background-color:#e03a3c !important ;
+}
 .portfolio-img {
     overflow: hidden;
 }
-.portfolio .portfolio-img img {
+.tab-content .portfolio-img img {
     transition: all 0.6s;
 }
-.portfolio .portfolio-img:hover img{
+.tab-content .portfolio-img:hover img{
     transform: scale(1.15);
 }
-.portfolio .portfolio-img:hover .portinfo{
+.tab-content .portfolio-img:hover .portinfo{
     opacity:1;
     color: white;
 }
-.portfolio .portfolio-img .portinfo i:hover{
+.tab-content .portfolio-img .portinfo i:hover{
     color: #31a9e1;
     cursor: pointer;
 }
@@ -195,23 +266,93 @@
     opacity: 0;
     position: absolute;
     bottom: 0;
+    top: 0;
     z-index: 3;
     transition: all 0.3s;
-    background: rgba(55, 81, 126, 0.8);
+    background: rgba(20, 19, 19, 0.526);
 }
-
  /* ======================================================================================================== */
- #team{
-    background-color: #f3f5fa;
+ #testimonials h2 {
+    position: relative;
+    color: black;
+}
+#testimonials h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: white;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+#testimonials h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background:#e03a3c ;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+ #testimonials .fa-quote-left,.fa-quote-right{
+    color: rgb(208, 190, 250);
+    padding-right: 5px;
+    font-size: 25px;
  }
+ #testimonials .titletest .para::after{
+    content:"";
+    height: 2px;
+    width: 60px;
+    margin-left: 5px;
+    display: inline-block;
+    background: #e03a3c;
+ } 
+ /* =========================================================================================================*/
+ #team{
+    position: relative;
+ }
+ #team::before{
+    z-index: 0;
+    content: "";
+    background: #1b1b1b;
+    position: absolute;
+    bottom: 40px;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: skewY(-3deg);
+}
+#team h2 {
+    position: relative;
+    color: white;
+}
+#team h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: black;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+#team h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background:#e03a3c ;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
  #team .member {
     position: relative;
     background: #fff;
     transition: 0.5s;
-    height: 100%;
-}
-#team .member .pic {    
-    width: 180px;
 }
 #team .member h4 {
     color: #37517e;
@@ -230,16 +371,33 @@
     margin: 10px 0 0 0;
     font-size: 15px;
 }
-#team .member .social a {
+#team .member .social{
+    position: absolute;
+    bottom: 110px;
+    margin: 0px -10px;
+    display: none !important;
+}
+#team .member:hover .social{
+    display:inline-flex !important;
+}
+#team .member .social a{
     transition: ease-in-out 0.3s;
     background: #eff2f8;
 }
+#team .member .social a{ 
+    background-color:#e03a3c;
+    transition: 0.5s;
+ }
 #team .member .social a:hover{ 
-   background-color: #31a9e1;
+   background-color: black;
+   position: relative;
+   top: -1px;
+   transform: translateY(-10px);
+   
 }
 #team .member .social a i{
-    color: #37517e;
-    font-size: 16px;
+    color: white;
+    font-size: 20px;
     margin: 0 2px;
 }
 #team .member .social a:hover i{
@@ -252,19 +410,58 @@
     transition: 0.8s;
 }
 /* ======================================================================================================== */
-#pricing .box {
-    padding: 0px 40px;
-    background: #fff;
+#pricing{
+    position: relative;
+}
+#pricing::before{
+    z-index: 0;
+    content: "";
+    background: #1b1b1b;
+    position: absolute;
+    bottom: 40px;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: skewY(-3deg);
+}
+#pricing h2 {
+    position: relative;
+    color: white;
+}
+#pricing h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: black;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+#pricing h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background:#e03a3c ;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+#pricing .box{
+    background: #252525;
     height: 100%;
+}
+#pricing p{
+    color: white;
 }
 #pricing h3 {
     font-weight: 500;
     font-size: 20px;
-    color: #37517e;
 }
 #pricing h4 {
     font-size: 48px;
-    color: #37517e;
     font-weight: 400;
     font-family: "Jost", sans-serif;
 }
@@ -272,14 +469,12 @@
     font-size: 28px;
 }
 #pricing h4 span {
-    color: #47b2e4;
     font-size: 18px;
     display: block;
 }
 #pricing ul {
     padding: 20px 0;
     list-style: none;
-    color: #4b4646;
     text-align: left;
     line-height: 20px;
 }
@@ -288,7 +483,7 @@
     position: relative;
 }
 #pricing .row ul li i {
-    color:green !important;
+    color:#fff !important;
     padding-right: 0.5rem;
 }
 #pricing .buy-btn {
@@ -304,27 +499,45 @@
     transition: 0.3s;
     border: 1px solid #47b2e4;
 }
-.opp{
-    background-color: #47b2e4 !important;
-    color: white !important;    
-}
 .opp:hover{
-    background-color:#4668a2 !important;
-    color: white !important;    
-}
-
-#pricing .featured{
-    border-top: 4px solid #209dd8;
+    transform: scale(1.1);
+    background-color: #dc3545 !important;
 }
 #pricing .buy-btn:hover {
-    background: #47b2e4;
-    color: #fff !important;
+    transform: scale(1.1);
 }
 /* ============================================================================================================================= */
 #freq-question{
-    background-color: #f3f5fa;
+    background-color: #fff;
+}
+#freq-question .accordion-button{
+    color: #e03a3c;
 }
 /* ========================================================================================================================== */
+#Contact h2 {
+    position: relative;
+    color: black;
+}
+#Contact h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: white;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+#Contact h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background:#e03a3c ;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
 #Contact .info {
     background: #fff;
 }
@@ -333,7 +546,7 @@
 }
 #Contact .info i {
     font-size: 20px;
-    color: #47b2e4;
+    color: #dc3545;
     width: 44px;
     height: 44px;
     background: #e7f5fb;
@@ -345,14 +558,14 @@
     transition: all 0.3s ease-in-out;
 }
 #Contact .info h4 {
-    padding: 0 0 0 60px;
+    /* padding: 0 0 0 60px; */
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
     color: #37517e;
 }
 #Contact .info p {
-    padding: 0 0 10px 60px;
+    /* padding: 0 0 10px 60px; */
     margin-bottom: 20px;
     font-size: 14px;
     color: #6182ba;
@@ -372,7 +585,7 @@
     border-radius: 50px;
 }
 #Contact .php-email-form button:hover{
-    background:#209dd8 !important;
+    background:#e03a3c !important;
 }
 /* =================================================================================================== */
 #Newsletter{
@@ -400,43 +613,24 @@
     background-color: #209dd8;
 }
 /* ========================================================================================================================= */
-#footer .social {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+#footer .list-unstyled i{
+    font-size: 10px;
+    padding: 5px 5px;
+   
 }
-#footer .social a {
-    transition: ease-in-out 0.3s;
-    display: flex;
-    text-decoration: none   ;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    width: 32px;
-    height: 32px;
-    margin: 0px 3px 0px 3px;
-    background: #eff2f8;
+#footer .social{
+    position: relative;
+    display:inline-flex !important;
 }
-#footer .social a:hover{ 
-   background-color: #31a9e1;
+#footer .social i:hover{
+    color: white !important;
 }
-#footer .social a i {
-    color: #37517e;
-    font-size: 16px;
-    margin: 0 2px;
+#footer .list-unstyled a{
+    color: #6b6a6a !important;
 }
-#footer .social a:hover i{
-    color: white;
+#footer .list-unstyled a:hover{
+    color: #e03a3c !important;
 }
-#footer a{
-    text-decoration: none;
-    color: #0a58ca;
-}
-#footer .fs-5 {
-    font-size: 2.25rem!important;
-}
-
 /* ===================================== footer complete ============================================================== */
 
 
